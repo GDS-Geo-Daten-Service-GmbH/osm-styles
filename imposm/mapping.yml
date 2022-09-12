@@ -113,8 +113,17 @@ tables:
     - key: religion
       name: religion
       type: string
+    - key: tower:type
+      name: tower_type
+      type: string
+    - key: tower:construction
+      name: tower_construction
+      type: string
     - key: denomination
       name: denomination
+      type: string
+    - key: vending
+      name: vending
       type: string
     - key: power_source
       name: power_source
@@ -132,7 +141,9 @@ tables:
             - aerodrome
             tourism:
             - artwork
+            - gallery
             - alpine_hut
+            - huntin_stand
             - camp_site
             - caravan_site
             - chalet
@@ -150,6 +161,7 @@ tables:
             - atm
             - bank
             - bar
+            - casino
             - bicycle_rental
             - bus_station
             - cafe
@@ -194,7 +206,11 @@ tables:
             - nightclub
             - veterinary
             - social_facility
-            - charging_station   
+            - charging_station
+            - bench
+            - waste_basket
+            - waste_disposal
+            - vending_machine
             shop:
             - __any__
             leisure:
@@ -206,6 +222,8 @@ tables:
             - slipway
             - dog_park
             - sauna
+            - sports_centre
+            - fitness_centre
             man_made:
             - mast
             - water_tower
@@ -213,12 +231,15 @@ tables:
             - windmill
             - cross
             - obelisk
+            - tower
             natural:
             - peak
             - volcano
             - saddle
             - spring
             - cave_entrance
+            - tree
+            - shrub
             historic:
             - memorial
             - monument
@@ -299,7 +320,7 @@ tables:
             - nightclub
             - veterinary
             - social_facility
-            - charging_station   
+            - charging_station
             shop:
             - __any__
             leisure:

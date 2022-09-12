@@ -1205,7 +1205,7 @@
       [type = 'trunk'][@sd <= 400k],
       [type = 'primary'][@sd <= 200k],
       [type = 'secondary'][@sd <= 200k] {
-        label: [ref];
+        label: strReplace(strReplace([ref], "; ", " / ", true), ";", " / ", true);
         :shield {
           size: categorize(@sd, 16, 12.5k, 17)
         };
@@ -1250,7 +1250,7 @@
       'secondary',
       'tertiary'
     )][@sd <= 100k] {
-      label: [ref];
+      label: strReplace(strReplace([ref], "; ", " / ", true), ";", " / ", true);
       [type = 'motorway'] {
         font-fill: #620728;
         :shield {
@@ -1295,7 +1295,7 @@
       'unclassified',
       'residential'
     )][@sd <= 25k] {
-      label: [ref];
+      label: strReplace(strReplace([ref], "; ", " / ", true), ";", " / ", true);
       font-fill: #333333;
       halo-radius: 2;
       halo-color: #ffffff;
@@ -1315,7 +1315,7 @@
       'runway',
       'taxiway'
     )][@sd <= 25k] {
-      label: [ref];
+      label: strReplace(strReplace([ref], "; ", " / ", true), ";", " / ", true);
       font-fill: #333333;
       halo-radius: 2;
       halo-color: #ffffff;

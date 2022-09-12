@@ -64,6 +64,7 @@
     'newsagent',
     'alcohol',
     'wine',
+    'bookmaker',
     'butcher',
     'bakery',
     'beverages',
@@ -78,6 +79,9 @@
     'dairy',
     'books',
     'gift',
+    'massage',
+    'interior_decoration',
+    'hearing_aids',
     'stationery')] [@sd < 6k] [@sd >= 3k] {
       shield: symbol(circle);
       :shield {
@@ -90,6 +94,10 @@
   [type in ('alcohol', 'wine')][@sd < 3k] {
     shield: symbol('file://symbols/shop/alcohol.svg');
     :shield { fill: #ac39ac };
+  };
+  [type = 'bookmaker'][@sd < 3k] {
+    shield: symbol('file://symbols/shop/bookmaker.svg');
+    :shield { fill:  #ac39ac };
   };
   [type = 'butcher'][@sd < 3k] {
     shield: symbol('file://symbols/shop/butcher.svg');
@@ -154,8 +162,8 @@
     shield: symbol('file://symbols/shop/newsagent.svg');
     :shield { fill:  #ac39ac };
   };
-  [type = 'supershieldet'][@sd < 12.5k] {
-    shield: symbol('file://symbols/shop/supershieldet.svg');
+  [type = 'supermarket'][@sd < 12.5k] {
+    shield: symbol('file://symbols/shop/supermarket.svg');
     :shield { fill: #ac39ac };
   };
 
@@ -185,6 +193,10 @@
   /* Health and beauty */
   [type = 'beauty'][@sd < 3k] {
     shield: symbol('file://symbols/shop/beauty.svg');
+    :shield { fill:  #ac39ac };
+  };
+  [type = 'massage'][@sd < 3k] {
+    shield: symbol('file://symbols/shop/massage.svg');
     :shield { fill:  #ac39ac };
   };
   [type in ('cosmetics', 'perfumery')][@sd < 3k] {
@@ -226,6 +238,10 @@
     :shield { fill: #ac39ac };
   };
   [type = 'furniture'][@sd < 3k] {
+    shield: symbol('file://symbols/shop/furniture.svg');
+    :shield { fill: #ac39ac };
+  };
+  [type = 'interior_decoration'][@sd < 3k] {
     shield: symbol('file://symbols/shop/furniture.svg');
     :shield { fill: #ac39ac };
   };
@@ -372,6 +388,7 @@
     shield: symbol('file://symbols/cave.svg');
     :shield { fill: #000000 };
   };
+  
   /*
   * Amenities Culture
   */
@@ -412,12 +429,11 @@
   /*
   * Amenities Tourism
   */
-
   [type = 'alpine_hut'][@sd < 100k] {
     shield: symbol('file://symbols/alpinehut.p.16.svg');
     :shield { fill: #0092da };
   };
-  [type = 'artwork'][@sd < 6k] {
+  [type in ('artwork', 'gallery')][@sd < 6k] {
     shield: symbol('file://symbols/artwork.svg');
     :shield { fill: #734a08 };
   };
@@ -432,6 +448,10 @@
   /* TODO: SVG */
   [type = 'chalet'][@sd < 6k] {
     shield: url('symbols/chalet.p.16.png');
+  };
+  [type = 'casino'][@sd < 6k] {
+    shield: symbol('file://symbols/casino.svg');
+    :shield { fill: #0092da };
   };
   [type = 'hostel'][@sd < 6k] {
     shield: symbol('file://symbols/hostel.svg');
@@ -666,6 +686,42 @@
   /*
   * Amenities Misc
   */
+  [type = 'vending_machine'][@sd < 6k] {
+    [vending = 'excrement_bags'] {
+      shield: symbol('file://symbols/excrement_bags.svg');
+      :shield { 
+        fill: #734a08 
+      };
+    };
+    [vending = 'parking_tickets'] {
+      shield: symbol('file://symbols/parking_tickets.svg');
+      :shield { 
+        fill: #734a08 
+      };
+    };
+    [vending = 'public_transport_tickets'] {
+      shield: symbol('file://symbols/public_transport_tickets.svg');
+      :shield { 
+        fill: #734a08 
+      };
+    };
+  };
+  
+  [type = 'bench'][@sd < 3k] {
+    shield: symbol('file://symbols/bench.svg');
+    shield-size: 6;
+    :shield { fill: #734a08 };
+  };
+  
+  [type = 'waste_basket'][@sd < 3k] {
+    shield: symbol('file://symbols/waste_basket.svg');
+    :shield { fill: #734a08 };
+  };
+  
+  [type = 'waste_disposal'][@sd < 6k] {
+    shield: symbol('file://symbols/waste_disposal.svg');
+    :shield { fill: #734a08 };
+  };
 
   [type = 'ford'][@sd < 12.5k] {
     shield: symbol('file://symbols/ford.svg');
@@ -759,6 +815,46 @@
     shield: symbol('file://symbols/water_tower.svg');
     :shield { fill: #555 };
   };
+  [type = 'tower'][@sd < 6k] {
+    shield: symbol('file://symbols/tower_generic.svg');
+    :shield { fill: #555 };
+    [tower_type = 'defensive'] {
+      shield: symbol('file://symbols/tower_defensive.svg');
+    };
+    [tower_type in ('observation', 'watchtower')] {
+      shield: symbol('file://symbols/tower_observation.svg');
+    };
+    [tower_type = 'bell_tower'] {
+      shield: symbol('file://symbols/bell_tower.svg');
+    };
+    [tower_type = 'cooling'] {
+      shield: symbol('file://symbols/tower_cooling.svg');
+    };
+    [tower_construction = 'lattice'] {
+      shield: symbol('file://symbols/tower_lattice.svg');
+    };
+    [tower_construction = 'dish'] {
+      shield: symbol('file://symbols/tower_dish.svg');
+    };
+    [tower_construction = 'dome'] {
+      shield: symbol('file://symbols/tower_dome.svg');
+    };
+    [tower_type = 'communication'] {
+      shield: symbol('file://symbols/tower_cantilever_communication.svg');
+      [tower_construction = 'lattice'] {
+        shield: symbol('file://symbols/tower_lattice_communication.svg');
+      };
+      [tower_construction = 'dish'] {
+        shield: symbol('file://symbols/tower_dish.svg');
+      };
+      [tower_construction = 'dome'] {
+        shield: symbol('file://symbols/tower_dome.svg');
+      };
+    };
+    [tower_type = 'lighting'] {
+      shield: symbol('file://symbols/tower_lattice_lighting.svg');
+    };
+  };
 
   [type = 'memorial'][@sd < 6k] {
     shield: symbol('file://symbols/memorial.svg');
@@ -792,6 +888,10 @@
     [access <> ''][access <> 'permissive'][access <> 'yes'] {
       :shield { fill-opacity: 0.33 };
     };
+  };
+
+  [type in ('fitness_centre', 'sports_centre')][@sd < 6k] {
+    shield: url('symbols/fitness.png');
   };
 
   [type = 'miniature_golf'][@sd < 6k] {
@@ -852,8 +952,19 @@
     :shield { fill: #555 };
   };
 
+  [type in ('tree', 'shrub')][@sd < 3k] {
+    mark: symbol(circle);
+    mark-size: 5;
+    :mark {
+      fill: #b27f36;
+      stroke: #87AF36;
+      stroke-opacity: 0.4;
+      stroke-width: 10;
+    };
+  };
+
   /*
-  * TODO: Missing man_made, barrier, tree, historical, power_source
+  * TODO: Missing man_made, barrier, historical, power_source
   */
 }
 
@@ -1116,7 +1227,8 @@
 
   [type in (
     'memorial',
-    'artwork'
+    'artwork',
+    'gallery'
   )][@sd <= 6k],
   [type = 'memorial_plaque'][@sd < 1.5k],
   [type in (
@@ -1167,6 +1279,7 @@
   [type in (
     'playground',
     'dog_park',
+    'sports_centre',
     'fitness_centre',
     'fitness_station'
   )][@sd <= 6k]  {
@@ -1244,6 +1357,7 @@
     'hairdresser',
     'hifi',
     'houseware',
+    'bookmaker',
     'ice_cream',
     'butcher',
     'car',
