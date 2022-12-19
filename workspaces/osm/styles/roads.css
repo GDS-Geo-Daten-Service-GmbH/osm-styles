@@ -1195,7 +1195,7 @@
     label-group: true;
     font-size: 10;
     font-weight: bold;
-    shield: symbol(square);
+    shield: symbol('file://symbols/shields/tertiary_1x1.svg');
     shield-resize: stretch;
     shield-margin: 3 4 8;
     label-padding: 10;
@@ -1293,10 +1293,10 @@
       };
       [type = 'tertiary'] {
         shield: symbol('file://symbols/shields/tertiary_1x1.svg');
-        font-fill: #FFF;
+        font-fill: #000;
         :shield {
-          fill: #F1F1F1;
-          stroke: #C6C6C6;
+          fill: #f1f1f1;
+          stroke: #c6c6c6;
         };
       };
     };
@@ -1307,7 +1307,7 @@
     )][@sd <= 25k] {
       label: strReplace(strReplace([ref], "; ", " / ", true), ";", " / ", true);
       font-fill: #333333;
-      halo-radius: 2;
+      halo-radius: 1;
       halo-color: #ffffff;
       label-repeat: 150;
       label-max-displacement: 300;
@@ -1327,7 +1327,7 @@
     )][@sd <= 25k] {
       label: strReplace(strReplace([ref], "; ", " / ", true), ";", " / ", true);
       font-fill: #333333;
-      halo-radius: 2;
+      halo-radius: 1;
       halo-color: #ffffff;
       label-repeat: 150;
       label-max-displacement: 300;
@@ -1335,5 +1335,4 @@
       font-size: 10;
     };
   };
-
 }
