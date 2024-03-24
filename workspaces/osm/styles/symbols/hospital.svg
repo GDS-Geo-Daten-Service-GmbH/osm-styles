@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 14 14"
-   height="14"
-   width="14"
-   version="1.1">
-  <path
-     style="fill:#bf0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1"
-     d="m 5.5,13.5 v -3 h -3 v -3 h 3 v -3 h 3 v 3 h 3 v 3 h -3 v 3 z"
-     id="path4492" />
-  <path
-     style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1"
-     d="m 0,5.5 v -2 L 6.9999999,0.5 14,3.5 v 2 l -7.0000001,-3 z"
-     id="path4494" />
-</svg>
+<svg width="14" height="14" version="1.1" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="m5.5 13.5v-3h-3v-3h3v-3h3v3h3v3h-3v3h-3z" fill="#bf0000" fill-rule="evenodd"/><path d="m0 5.5v-2l7-3c2.3333 1 4.6667 2 7 3v2c-2.3333-1-4.6667-2-7-3l-7 3z" fill-rule="evenodd"/></svg>
