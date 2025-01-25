@@ -891,7 +891,7 @@
   };
 
   [type in ('fitness_centre', 'sports_centre')][@sd < 6k] {
-    shield: url('symbols/fitness.png');
+    shield: url('symbols/fitness.svg');
   };
 
   [type = 'miniature_golf'][@sd < 6k] {
